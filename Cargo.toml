@@ -2,19 +2,11 @@
 name = "toylang"
 version = "0.1.0"
 edition = "2021"
-authors = ["itsop002"]
 
 [dependencies]
-# Lexing
-logos = "0.14"
+cranelift = "0.108"
+cranelift-module = "0.108"
+cranelift-jit = "0.108"
 
-# Parsing
-nom = "7.1"
-
-# Optional: Additional useful utilities
-anyhow = "1.0"
-thiserror = "1.0"
-
-[[bin]]
-name = "toylang"
-path = "src/main.rs"
+[profile.release]
+opt-level = 3
